@@ -27,3 +27,47 @@
     border-radius: 5px;
 }
 
+.toast {
+    border-color: chocolate;
+    width: 500;
+    height: 100;
+    background-color: chocolate;
+    transform: translate(50px, 100px);
+
+    text-align: center;    
+    animation: spin 2s infinite ease-in-out, rainbow 0.5s infinite, movinggroving 10s infinite;
+}
+
+
+@keyframes spin {
+    0%   {-webkit-transform: rotate(0deg);  /* Chrome, etc. */
+        -ms-transform: rotate(0deg);  /* IE 9 */transform: rotate(0deg);  /* Firefox 16+, etc */
+    }100% {-webkit-transform: rotate(360deg);  /* Chrome, etc. */
+        -ms-transform: rotate(360deg);  /* IE 9 */
+        transform: rotate(360deg);  /* Firefox 16+, etc. */
+        position: relative;
+    }
+}
+
+@keyframes rainbow{
+    0% {background-color: red;}
+    20%{background-color: orange;}
+    40%{background-color: yellow;}
+    60%{background-color: green;}
+    80%{background-color: blue;}
+    100%{background-color: purple;}
+}
+
+@keyframes movinggroving{
+    0% {  transform: scaleX(0.5) scaleY(5.5);
+    }
+    50%{  transform: scaleX(5.5)  scaleY(0.5);
+        text-size-adjust: 50px;
+    }
+    75%{   transform: scaleX(0.5)  scaleY(5.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+
+}
